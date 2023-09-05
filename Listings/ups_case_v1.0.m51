@@ -1,0 +1,216 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    09/05/2023  18:00:07  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+G:\KEIL_V5_C51V961\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\btn.obj, .\Objects\delay.obj, .\Objects\eeprom.obj,
+>>  .\Objects\fan.obj, .\Objects\main.obj, .\Objects\power.obj, .\Objects\rgb.obj, .\Objects\uart.obj TO .\Objects\ups_c
+>> ase_v1.0.0 PRINT (.\Listings\ups_case_v1.0.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\btn.obj (BTN)
+  .\Objects\delay.obj (DELAY)
+  .\Objects\eeprom.obj (EEPROM)
+  .\Objects\fan.obj (FAN)
+  .\Objects\main.obj (MAIN)
+  .\Objects\power.obj (POWER)
+  .\Objects\rgb.obj (RGB)
+  .\Objects\uart.obj (UART)
+  G:\KEIL_V5_C51V961\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  G:\KEIL_V5_C51V961\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  G:\KEIL_V5_C51V961\C51\LIB\C51FPS.LIB (?C?FCAST)
+  G:\KEIL_V5_C51V961\C51\LIB\C51FPS.LIB (?C?CASTF)
+  G:\KEIL_V5_C51V961\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  G:\KEIL_V5_C51V961\C51\LIB\C51S.LIB (?C_INIT)
+  G:\KEIL_V5_C51V961\C51\LIB\C51S.LIB (?C?ULDIV)
+  G:\KEIL_V5_C51V961\C51\LIB\C51S.LIB (?C?LNEG)
+  G:\KEIL_V5_C51V961\C51\LIB\C51S.LIB (?C?ULCMP)
+  G:\KEIL_V5_C51V961\C51\LIB\C51S.LIB (?C?LLDIIDATA)
+  G:\KEIL_V5_C51V961\C51\LIB\C51S.LIB (?C?LIMUL)
+
+
+LINK MAP OF MODULE:  .\Objects\ups_case_v1.0.0 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0011H     UNIT         _DATA_GROUP_
+            DATA    0019H     0004H     UNIT         ?DT?_DELAYS?DELAY
+                    001DH     0003H                  *** GAP ***
+            BIT     0020H.0   0000H.2   UNIT         ?BI?MAIN
+                    0020H.2   0000H.6                *** GAP ***
+            DATA    0021H     0023H     UNIT         ?DT?MAIN
+            IDATA   0044H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     009AH     UNIT         ?PR?I2C_ISR?MAIN
+            CODE    009DH     0023H     UNIT         ?PR?_DELAYS?DELAY
+            CODE    00C0H     0001H     UNIT         ?PR?POWERMANAGERINLOWBATTERY?POWER
+            CODE    00C1H     0001H     UNIT         ?PR?CHARGEMANAGER?POWER
+            CODE    00C2H     0001H     UNIT         ?PR?POWERMONITOR?POWER
+            CODE    00C3H     0003H     ABSOLUTE     
+            CODE    00C6H     039FH     UNIT         ?C?LIB_CODE
+            CODE    0465H     008CH     UNIT         ?C_C51STARTUP
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/05/2023  18:00:07  PAGE 2
+
+
+            CODE    04F1H     0085H     UNIT         ?PR?MAIN?MAIN
+            CODE    0576H     0066H     UNIT         ?PR?OUTPUTCURRENTREAD?MAIN
+            CODE    05DCH     0056H     UNIT         ?PR?FANINIT?FAN
+            CODE    0632H     0051H     UNIT         ?PR?BATTERYVOLTAGEREAD?MAIN
+            CODE    0683H     004EH     UNIT         ?PR?_DELAYMS?DELAY
+            CODE    06D1H     004CH     UNIT         ?PR?POWERMANAGERATSTART?POWER
+            CODE    071DH     0031H     UNIT         ?PR?_I2CINIT?MAIN
+            CODE    074EH     0031H     UNIT         ?PR?POWERIOINIT?POWER
+            CODE    077FH     002AH     UNIT         ?PR?_FANSETSPEED?FAN
+            CODE    07A9H     0029H     UNIT         ?C_INITSEG
+            CODE    07D2H     001BH     UNIT         ?PR?_IAPREAD?EEPROM
+            CODE    07EDH     001BH     UNIT         ?PR?_IAPPROGRAM?EEPROM
+            CODE    0808H     001AH     UNIT         ?PR?BTNISPRESSED?BTN
+            CODE    0822H     0019H     UNIT         ?PR?_DELAYUS?DELAY
+            CODE    083BH     0019H     UNIT         ?PR?_IAPERASE?EEPROM
+            CODE    0854H     0017H     UNIT         ?PR?INIT?MAIN
+            CODE    086BH     0010H     UNIT         ?PR?_RGBWRITE?RGB
+            CODE    087BH     000DH     UNIT         ?PR?IAPIDLE?EEPROM
+            CODE    0888H     0009H     UNIT         ?PR?POWERINHOLD?POWER
+            CODE    0891H     0009H     UNIT         ?PR?POWEROUTOPEN?POWER
+            CODE    089AH     0009H     UNIT         ?PR?POWEROUTCLOSE?POWER
+            CODE    08A3H     0007H     UNIT         ?PR?BTNINIT?BTN
+            CODE    08AAH     0007H     UNIT         ?PR?RGBINIT?RGB
+            CODE    08B1H     0007H     UNIT         ?PR?RGBCLOSE?RGB
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\ups_case_v1.0.0 (?C_STARTUP)
+
+
+SEGMENT                                      DATA_GROUP 
+  +--> CALLED SEGMENT                      START    LENGTH
+----------------------------------------------------------
+?C_C51STARTUP                              -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                              0008H    0009H
+  +--> ?PR?INIT?MAIN
+  +--> ?PR?_RGBWRITE?RGB
+  +--> ?PR?BATTERYVOLTAGEREAD?MAIN
+  +--> ?PR?OUTPUTCURRENTREAD?MAIN
+  +--> ?PR?_FANSETSPEED?FAN
+  +--> ?PR?_DELAYMS?DELAY
+
+?PR?INIT?MAIN                              -----    -----
+  +--> ?PR?POWERIOINIT?POWER
+  +--> ?PR?POWERINHOLD?POWER
+  +--> ?PR?RGBINIT?RGB
+  +--> ?PR?BTNINIT?BTN
+  +--> ?PR?FANINIT?FAN
+  +--> ?PR?POWERMANAGERATSTART?POWER
+  +--> ?PR?_I2CINIT?MAIN
+
+?PR?POWERMANAGERATSTART?POWER              0011H    0001H
+  +--> ?PR?_DELAYUS?DELAY
+  +--> ?PR?_IAPREAD?EEPROM
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/05/2023  18:00:07  PAGE 3
+
+
+  +--> ?PR?_IAPERASE?EEPROM
+  +--> ?PR?_IAPPROGRAM?EEPROM
+
+?PR?_DELAYUS?DELAY                         0012H    0004H
+
+?PR?_IAPREAD?EEPROM                        -----    -----
+  +--> ?PR?IAPIDLE?EEPROM
+
+?PR?_IAPERASE?EEPROM                       -----    -----
+  +--> ?PR?IAPIDLE?EEPROM
+
+?PR?_IAPPROGRAM?EEPROM                     -----    -----
+  +--> ?PR?IAPIDLE?EEPROM
+
+?PR?_DELAYMS?DELAY                         0011H    0008H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\ups_case_v1.0.0 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C?FPMUL
+  C:00C6H         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FPDIV
+  C:01CFH         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?FCAST
+  C:0276H         PUBLIC        ?C?FCASTC
+  C:0271H         PUBLIC        ?C?FCASTI
+  C:026CH         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        ?C?CASTF
+  C:02AAH         PUBLIC        ?C?CASTF
+  -------         ENDMOD        ?C?CASTF
+
+  -------         MODULE        ?C?ULDIV
+  C:0367H         PUBLIC        ?C?ULDIV
+  -------         ENDMOD        ?C?ULDIV
+
+  -------         MODULE        ?C?LNEG
+  C:03F9H         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+  -------         MODULE        ?C?ULCMP
+  C:0407H         PUBLIC        ?C?ULCMP
+  -------         ENDMOD        ?C?ULCMP
+
+  -------         MODULE        ?C?LLDIIDATA
+  C:0421H         PUBLIC        ?C?LLDIIDATA
+  C:0418H         PUBLIC        ?C?LLDIIDATA1
+  C:041AH         PUBLIC        ?C?LLDIIDATA8
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/05/2023  18:00:07  PAGE 4
+
+
+  -------         ENDMOD        ?C?LLDIIDATA
+
+  -------         MODULE        ?C?LIMUL
+  C:0438H         PUBLIC        ?C?LIMUL
+  -------         ENDMOD        ?C?LIMUL
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BTNISPRESSED?BTN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYS?DELAY
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?POWEROUTOPEN?POWER
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?POWEROUTCLOSE?POWER
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?POWERMANAGERINLOWBATTERY?POWER
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHARGEMANAGER?POWER
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?POWERMONITOR?POWER
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RGBCLOSE?RGB
+
+Program Size: data=65.2 xdata=0 code=2232
+LINK/LOCATE RUN COMPLETE.  8 WARNING(S),  0 ERROR(S)

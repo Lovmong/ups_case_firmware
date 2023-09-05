@@ -1,0 +1,11 @@
+".\Objects\STARTUP.obj",
+".\Objects\btn.obj",
+".\Objects\delay.obj",
+".\Objects\eeprom.obj",
+".\Objects\fan.obj",
+".\Objects\main.obj",
+".\Objects\power.obj",
+".\Objects\rgb.obj",
+".\Objects\uart.obj" 
+TO ".\Objects\ups_case_v1.0.0" 
+PRINT(".\Listings\ups_case_v1.0.m51") RAMSIZE(256) 

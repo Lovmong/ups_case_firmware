@@ -1,0 +1,42 @@
+C51 COMPILER V9.60.7.0   RGB                                                               09/05/2023 10:19:21 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE RGB
+OBJECT MODULE PLACED IN .\Objects\rgb.obj
+COMPILER INVOKED BY: G:\Keil_v5_c51v961\C51\BIN\C51.EXE src\rgb.c OPTIMIZE(8,SPEED) INCDIR(.\src;.\system) PRINT(.\Listi
+                    -ngs\rgb.lst) TABS(2) OBJECT(.\Objects\rgb.obj)
+
+line level    source
+
+   1          #include "rgb.h"
+   2          
+   3          void rgbInit() {
+   4   1          P1M0 |= 0x4c; P1M1 &= ~0x4c;  // 设置P1.6, P1.3, P1.2为推挽输出模式
+   5   1      }
+   6          
+   7          
+   8          void rgbWrite(u8 r, u8 g, u8 b) {
+   9   1          RGB_R = r;
+  10   1          RGB_G = g;
+  11   1          RGB_B = b;
+  12   1      }
+  13          
+  14          void rgbClose() {
+  15   1          RGB_R = 0;
+  16   1          RGB_G = 0;
+  17   1          RGB_B = 0;   
+  18   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     30    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

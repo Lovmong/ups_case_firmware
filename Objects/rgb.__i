@@ -1,0 +1,1 @@
+"src\rgb.c" OPTIMIZE (8,SPEED) INCDIR(.\src;.\system) PRINT(.\Listings\rgb.lst) TABS (2) OBJECT(.\Objects\rgb.obj)

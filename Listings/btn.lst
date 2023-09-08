@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.7.0   BTN                                                               09/05/2023 11:52:52 PAGE 1   
+C51 COMPILER V9.60.7.0   BTN                                                               09/07/2023 16:20:56 PAGE 1   
 
 
 C51 COMPILER V9.60.7.0, COMPILATION OF MODULE BTN
@@ -11,8 +11,8 @@ line level    source
    1          #include "btn.h"
    2          
    3          void btnInit() {
-   4   1          P3M0 &= ~0x80; P3M1 |= 0x80; // 设置 P3.7 为高阻输入
-   5   1          // P3M0 &= ~0x80; P3M1 &= ~0x80;  // 设置 P3.7 为准双向口
+   4   1          P3M0 &= ~0x08; P3M1 |= 0x08; // 设置 P3.3 为高阻输入
+   5   1          // P3M0 &= ~0x08; P3M1 &= ~0x08; // 设置 P3.3 为准双向口
    6   1      }
    7          
    8          

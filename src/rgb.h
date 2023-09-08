@@ -4,9 +4,22 @@
 #include "stc8h.h"
 #include "types.h"
 
-#define RGB_R P16
-#define RGB_G P13
-#define RGB_B P12
+/*---------------------------------------------------------------
+    rgb: (PWMB)
+        LED_B -> PWM5 -> P2.0
+        LED_G -> PWM6 -> P2.1
+        LED_R -> PWM7 -> P2.2
+---------------------------------------------------------------*/
+#define LED_B P20
+#define LED_G P21
+#define LED_R P22
+
+#define LED_USE_PWM 1
+#define MAIN_Fosc 12000000L     //定义主时钟 12MHz
+
+// pwm频率 = 系统时钟/（（预分频+1）/ （自动重装载值arr+1））= 12MHz / 2 / 6000 = 1KHz
+#define _PWMB_PSCR 2          // 预分频 2 
+#define _PWMB_PERIOD 6000     // PWM周期 (PWMB_ARR自动重装值) 6000
 
 void rgbInit();
 void rgbWrite(u8 r, u8 g, u8 b);

@@ -387,6 +387,11 @@
           <GroupName>src</GroupName>
           <Files>
             <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\main.c</FilePath>
+            </File>
+            <File>
               <FileName>btn.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\btn.c</FilePath>
@@ -405,11 +410,6 @@
               <FileName>fan.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\fan.c</FilePath>
-            </File>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\main.c</FilePath>
             </File>
             <File>
               <FileName>power.c</FileName>

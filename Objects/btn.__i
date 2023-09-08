@@ -1,1 +1,0 @@
-"src\btn.c" OPTIMIZE (8,SPEED) INCDIR(.\src;.\system) PRINT(.\Listings\btn.lst) TABS (2) OBJECT(.\Objects\btn.obj)

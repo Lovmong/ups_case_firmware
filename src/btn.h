@@ -5,7 +5,7 @@
 #include "types.h"
 #include "delay.h"
 
-#define BTN P37
+#define BTN P33
 
 void btnInit();
 u8 btnIsPressed(void);

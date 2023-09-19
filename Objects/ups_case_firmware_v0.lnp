@@ -7,5 +7,6 @@
 ".\Objects\power.obj",
 ".\Objects\rgb.obj",
 ".\Objects\uart.obj" 
-TO ".\Objects\ups_case_v1.0.0" 
-PRINT(".\Listings\ups_case_v1.0.m51") RAMSIZE(256) 
+TO ".\Objects\ups_case_firmware_v0.1" 
+NOPRINT RAMSIZE(256) 
+XDATA( 0X0000-0X03FF )

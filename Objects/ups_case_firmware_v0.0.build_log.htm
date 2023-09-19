@@ -18,12 +18,23 @@ Hex Converter:   OH51.exe V2.7.0.0
 CPU DLL:         S8051.DLL V3.125.1.0
 Dialog DLL:      DP51.DLL V2.69.0.0 
 <h2>Project:</h2>
-C:\Users\Administrator\Desktop\ups_case\ups_case.uvproj
-Project File Date:  09/07/2023
+C:\Users\Administrator\Desktop\ups_case_firmware\ups_case_firmware.uvproj
+Project File Date:  09/14/2023
 
 <h2>Output:</h2>
-Build target 'Target 1'
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
 compiling main.c...
+src\main.c(340): warning C206: 'PowerInClose': missing function-prototype
+compiling btn.c...
+compiling delay.c...
+compiling eeprom.c...
+compiling fan.c...
+compiling power.c...
+src\power.c(380): warning C173: missing return-expression
+src\power.c(380): warning C290: missing return value
+compiling rgb.c...
+compiling uart.c...
 linking...
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?RGBTEST?MAIN
@@ -32,17 +43,11 @@ linking...
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?FANTEST?MAIN
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?BTNINIT?BTN
+    SEGMENT: ?PR?BTNISRELEASED?BTN
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_DELAYS?DELAY
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?FANINIT?FAN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?OUTPUTCURRENTREAD?POWER
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?CHARGEMANAGER?POWER
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?DACINIT?POWER
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?CALCULATEBATTERYIR?POWER
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
@@ -53,12 +58,10 @@ linking...
     SEGMENT: ?PR?POWERMANAGERINLOWBATTERY?POWER
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?POWERMONITOR?POWER
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?RGBCLOSE?RGB
-Program Size: data=75.2 xdata=0 code=3003
-creating hex file from ".\Objects\ups_case_v1.0.0"...
-".\Objects\ups_case_v1.0.0" - 0 Error(s), 15 Warning(s).
-Build Time Elapsed:  00:00:01
+Program Size: data=109.3 xdata=30 code=5062
+creating hex file from ".\Objects\ups_case_firmware_v0.0.1"...
+".\Objects\ups_case_firmware_v0.0.1" - 0 Error(s), 14 Warning(s).
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

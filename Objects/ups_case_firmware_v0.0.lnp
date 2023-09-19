@@ -1,0 +1,12 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\btn.obj",
+".\Objects\delay.obj",
+".\Objects\eeprom.obj",
+".\Objects\fan.obj",
+".\Objects\power.obj",
+".\Objects\rgb.obj",
+".\Objects\uart.obj" 
+TO ".\Objects\ups_case_firmware_v0.0.1" 
+NOPRINT RAMSIZE(256) 
+XDATA( 0X0000-0X03FF )

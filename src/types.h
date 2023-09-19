@@ -20,4 +20,3 @@ typedef unsigned long u32;
 #define null 0
 
 #endif
-
